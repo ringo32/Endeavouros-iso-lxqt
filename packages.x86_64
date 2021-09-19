@@ -76,7 +76,7 @@ gvfs-afc
 gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
-gvfs-smb
+#gvfs-smb
 
 #general-system
 mlocate
@@ -117,54 +117,47 @@ smartmontools
 usbutils
 
 #DM
-lightdm-gtk-greeter
-lightdm-gtk-greeter-settings
-accountsservice
+sddm
 
-#xfce4-desktop
-xfce4
-xed
-parole
-ristretto
-thunar-archive-plugin
-thunar-media-tags-plugin
-xfce4-battery-plugin
-xfce4-datetime-plugin
-xfce4-mount-plugin
-xfce4-netload-plugin
-xfce4-notifyd
-xfce4-pulseaudio-plugin
-xfce4-screensaver
-xfce4-screenshooter
-xfce4-taskmanager
-xfce4-wavelan-plugin
-xfce4-weather-plugin
-xfce4-whiskermenu-plugin
-xfce4-xkb-plugin
-neofetch
-capitaine-cursors
-gtk-engine-murrine
-gnome-themes-extra
-adwaita-icon-theme
-file-roller
-libwnck3
-network-manager-applet
-galculator
-firefox
+#lxqt
+lximage-qt
+lxqt-about
+lxqt-admin
+lxqt-archiver
+lxqt-config
+lxqt-globalkeys
+lxqt-notificationd
+lxqt-openssh-askpass
+lxqt-panel
+lxqt-policykit
+lxqt-qtplugin
+lxqt-runner
+lxqt-session
+lxqt-sudo
+lxqt-themes
+obconf-qt
+openbox
+pavucontrol-qt
+falkon
 kvantum-qt5
-qt5ct
+
+##additional software
+baka-mplayer
+audacious
+audacious-plugins
 
 #fonts
 ttf-dejavu
 ttf-liberation
 ttf-bitstream-vera
 cantarell-fonts
-noto-fonts
 adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts
 adobe-source-han-sans-cn-fonts
 opendesktop-fonts
 ttf-opensans
+ttf-roboto
+ttf-roboto-mono
 
 #audio
 alsa-utils
@@ -175,7 +168,7 @@ pulseaudio-alsa
 pulseaudio-bluetooth
 pulseaudio-equalizer
 pulseaudio-jack
-pavucontrol
+#pavucontrol
 ffmpegthumbnailer
 gst-libav
 gst-plugins-bad
@@ -235,7 +228,7 @@ grsync
 clonezilla
 hdparm
 fsarchiver
-glances
+htop
 python-defusedxml
 inxi
 bash-completion
@@ -278,7 +271,6 @@ rate-mirrors-bin
 mkinitcpio-openswap
 ckbcomp
 grub2-theme-endeavouros
-endeavouros-xfce4-terminal-colors
 endeavouros-theming
 arc-x-icons-theme
 arc-gtk-theme-eos

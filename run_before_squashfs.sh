@@ -24,16 +24,17 @@ cp -aT /etc/skel/ /root/
 rm /root/xed.dconf
 chmod 700 /root
 useradd -m -p \"\" -g users -G 'sys,rfkill,wheel' -s /bin/bash liveuser
-git clone -b 08-2021 --single-branch https://github.com/endeavouros-team/liveuser-desktop-settings.git
+git clone https://github.com/ringo32/liveuser-lxqt-settings.git
 #git clone https://github.com/endeavouros-team/liveuser-desktop-settings.git
-cd liveuser-desktop-settings
+cd liveuser-lxqt-settings
 rm -R /home/liveuser/.config
 cp -R .config /home/liveuser/
 chown -R liveuser:liveuser /home/liveuser/.config
-cp .xinitrc .xprofile .Xauthority /home/liveuser/
+cp .xinitrc .xprofile .Xauthority .xscreensaver /home/liveuser/
 chown liveuser:liveuser /home/liveuser/.xinitrc
 chown liveuser:liveuser /home/liveuser/.xprofile
 chown liveuser:liveuser /home/liveuser/.Xauthority
+chown liveuser:liveuser /home/liveuser/.xscreensaver
 cp -R .local /home/liveuser/
 chown -R liveuser:liveuser /home/liveuser/.local
 chmod +x /home/liveuser/.local/bin/*
@@ -46,7 +47,7 @@ cp .bashrc /home/liveuser/
 chown liveuser:liveuser /home/liveuser/.bashrc
 cp LICENSE /home/liveuser/
 cd ..
-rm -R liveuser-desktop-settings
+rm -R liveuser-lxqt-settings
 chmod 755 /etc/sudoers.d
 mkdir -p /media
 chmod 755 /media
@@ -55,6 +56,7 @@ chown 0 /etc/sudoers.d
 chown 0 /etc/sudoers.d/g_wheel
 chown root:root /etc/sudoers.d
 chown root:root /etc/sudoers.d/g_wheel
+chown root:root /etc/sddm.conf
 chmod 755 /etc
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 # sed -i 's/#Server/Server/g' /etc/pacman.d/mirrorlist
@@ -100,16 +102,16 @@ echo 'GRUB_DISABLE_OS_PROBER=false' >> /etc/default/grub
 
 # rm /boot/grub/grub.cfg --> seems mkarchiso is doing this now?
 
-wget https://raw.githubusercontent.com/endeavouros-team/liveuser-desktop-settings/08-2021/dconf/xed.dconf
-dbus-launch dconf load / < xed.dconf
-sudo -H -u liveuser bash -c 'dbus-launch dconf load / < xed.dconf'
-rm xed.dconf
+#wget https://raw.githubusercontent.com/endeavouros-team/liveuser-desktop-settings/08-2021/dconf/xed.dconf
+#dbus-launch dconf load / < xed.dconf
+#sudo -H -u liveuser bash -c 'dbus-launch dconf load / < xed.dconf'
+#rm xed.dconf
 chmod -R 700 /root
 chown root:root -R /root
 chown root:root -R /etc/skel
 chmod 644 /usr/share/endeavouros/*.png
-rm -rf /usr/share/backgrounds/xfce/xfce-verticals.png
-ln -s /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png /usr/share/backgrounds/xfce/xfce-verticals.png
+#rm -rf /usr/share/backgrounds/xfce/xfce-verticals.png
+#ln -s /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png /usr/share/backgrounds/xfce/xfce-verticals.png
 chsh -s /bin/bash"
 }
 
