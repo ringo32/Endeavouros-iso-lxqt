@@ -114,6 +114,8 @@ rm -rf /usr/share/lxqt/themes/frost/lxqt-origami-light.png
 ln -s /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png /usr/share/lxqt/themes/frost/lxqt-origami-light.png
 rm -rf /usr/share/sddm/themes/maldives/background.jpg
 ln -s  /usr/share/endeavouros/backgrounds/endeavouros)wallpaper.png /usr/share/sddm/themes/maldives/background.jpg
+rm -rf /usr/bin/chrooted-cleaner-script.sh
+mv /root/chrooted-cleaner-script.sh /usr/bin/
 chsh -s /bin/bash"
 }
 
