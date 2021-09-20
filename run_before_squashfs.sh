@@ -110,8 +110,10 @@ chmod -R 700 /root
 chown root:root -R /root
 chown root:root -R /etc/skel
 chmod 644 /usr/share/endeavouros/*.png
-#rm -rf /usr/share/backgrounds/xfce/xfce-verticals.png
-#ln -s /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png /usr/share/backgrounds/xfce/xfce-verticals.png
+rm -rf /usr/share/lxqt/themes/frost/lxqt-origami-light.png
+ln -s /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png /usr/share/lxqt/themes/frost/lxqt-origami-light.png
+rm -rf /usr/share/sddm/themes/maldives/background.jpg
+ln -s  /usr/share/endeavouros/backgrounds/endeavouros)wallpaper.png /usr/share/sddm/themes/maldives/background.jpg
 chsh -s /bin/bash"
 }
 
