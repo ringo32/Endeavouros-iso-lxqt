@@ -130,6 +130,7 @@ lxqt-notificationd
 lxqt-openssh-askpass
 lxqt-panel
 lxqt-policykit
+lxqt-powermanagement
 lxqt-qtplugin
 lxqt-runner
 lxqt-session
@@ -138,8 +139,13 @@ lxqt-themes
 obconf-qt
 openbox
 pavucontrol-qt
+pcmanfm-qt
+qterminal
+screengrab
 falkon
 kvantum-qt5
+featherpad
+feathernotes
 
 ##additional software
 baka-mplayer
